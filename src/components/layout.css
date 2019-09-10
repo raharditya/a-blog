@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  /* text-decoration: none; */
+  color: black;
+}
+
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+header {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-nav {
+  margin-top: 5px;
+}
+
+.header-nav a {
+  margin-right: 15px;
+}
+
+/* POST INDEX */
+
+.post {
+  padding-top: 1.5em;
+}
+
+.post-title {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.post-excerp {
+  margin-top: 15px;
+  line-height: 150%;
+}
+
+/* POST INDIVIDUAL */
+
+.post-header {
+  margin-bottom: 1em;
+}
+
+.post-content p {
+  margin-bottom: 15px;
+  line-height: 150%;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
