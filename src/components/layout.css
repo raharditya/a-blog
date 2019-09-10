@@ -3,11 +3,17 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Vollkorn", serif;
 }
 
 a {
   /* text-decoration: none; */
   color: black;
+}
+
+ul,
+ol {
+  list-style-position: inside;
 }
 
 body {
