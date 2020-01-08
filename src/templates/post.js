@@ -26,7 +26,7 @@ export default function Template({ data }) {
 
       <section className="post-header">
         <h3 className="post-title" style={{marginTop: "1em"}}>{post.frontmatter.title}</h3>
-        <small className="post-date">{post.frontmatter.date}</small>
+        <small className="post-date">{post.frontmatter.dateString}</small>
       </section>
 
       <article className="post-content">
@@ -46,6 +46,7 @@ export const postQuery = graphql`
         path
         title
         date
+        dateString
       }
     }
   }

@@ -1,7 +1,8 @@
 ---
 path: "/depression-or-whatever-this-is-called"
+date: "2019-09-14"
+dateString: "14 September 2019"
 title: "Depression (or whatever this is called)"
-date: "14 September 2019"
 ---
 
 Hi, it's me again. I just want to make a simple post this time, nothing constructed or anything. Just stuff that's been bugging me for a very long time now. This is that sort of sad posts that I used to make in my old blog. I initially didn't want to make something like this in this blog since this domain is kind of associated with my web resume page thing, and that's not a good marketing, you know, to let your possible employer know of all the problems and shits that you're going through. But I figured that I'll just completely remove all links that leads to this blog. I'll make it seems like this blog doesn't exist on the main page. That way at least they wouldn't see it right in front of them. Anyway, the reason that I'm making this is so that I can both understand this thing more rationally (writing about it helps a lot, trust me) as well as a mean for me to express what I'm feeling. I'm really bad at expressing myself, both online and in real life. I think by embracing this thing, especially in a website that's not hidden from the world, I would be able to express myself a bit better. And yes, my former blog was hidden from all search engine, although it depends on the search engine itself to respect that. Okay, so enough with the preface, here we go.

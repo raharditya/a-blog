@@ -34,21 +34,21 @@ const IndexPage = ({ data }) => (
             >
               <h3>{post.node.frontmatter.title}</h3>
             </Link>
-            <small className="post-date">{post.node.frontmatter.date}</small>
+            <small className="post-date">{post.node.frontmatter.dateString}</small>
             <p className="post-excerp">
               {post.node.excerpt.substring(0, 100) + "..."}
             </p>
           </div>
-        ))
-        .reverse()}
+        ))}
     </main>
     <Footer />
+    {/* <button onClick={Array}>Debug</button> */}
   </React.Fragment>
 )
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date]}) {
       edges {
         node {
           id
@@ -56,6 +56,7 @@ export const pageQuery = graphql`
             path
             title
             date
+            dateString
           }
           excerpt
         }

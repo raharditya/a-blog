@@ -1,6 +1,7 @@
 ---
 path: "/hello-world"
-date: "10 September 2019"
+date: "2019-09-10"
+dateString: "10 September 2019"
 title: "Hello World"
 ---
 
