@@ -27,9 +27,7 @@ const About = () => {
           Hi! My name is Adit Raharditya, and welcome to my blog.
         </p>
         <p>
-          This blog was made using GatsbyJs and GraphQl. This place will be home
-          to many posts, ranging from those random stuff or sometimes serious
-          ones. I hope you bear with me. Enjoy!
+          I'm bad at writing though, so get ready for some mundane, averagely-written, cringe-inducing blog posts. This site was made using my favorite Javascript framework, GatsbyJs.
         </p>
       </article>
 
