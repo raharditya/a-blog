@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 a {
-  /* text-decoration: none; */
+  /* text-decoration: none;
   color: black;
 }
 
@@ -36,7 +36,7 @@ header {
   margin-right: 15px;
 }
 
-/* POST INDEX */
+/* POST INDEX
 
 .post {
   padding-top: 1.5em;
@@ -53,7 +53,7 @@ header {
   line-height: 150%;
 }
 
-/* POST INDIVIDUAL */
+/* POST INDIVIDUAL
 
 .post-header {
   margin-bottom: 1em;
@@ -64,10 +64,10 @@ header {
   line-height: 150%;
 }
 
-/* FOOTER */
+/* FOOTER
 
 footer {
   text-align: center;
   margin-top: 3em;
   margin-bottom: 1em;
-}
+} */
