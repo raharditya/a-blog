@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
     {context => (
       <React.Fragment>
         <div className={context.isDark ? "darkTheme" : "lightTheme"}>
-          <div className="page-wrapper">
+          <div className="page-wrapper about-wrapper">
             <Helmet>
               <meta charSet="utf-8" />
               <title>A Blog | raharditya.com</title>
