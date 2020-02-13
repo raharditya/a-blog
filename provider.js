@@ -4,14 +4,22 @@ import Cookies from 'js-cookie'
 export const myState = React.createContext()
 
 const Provider = props => {
-  const [isDark, setTheme] = useState(false)
+  const [isDark, setTheme] = useState()
 
   const getTheme = () => {
-    const getCookie = Cookies.get("isDark");
+    const getCookie = Cookies.get('isDark');
 
-    if (getCookie) {
+    console.log(isDark);
+    console.log(getCookie);
+
+    if (getCookie === "true") {
+      console.log("Theme set to true")
+      setTheme(false)
+    } else if (getCookie === "false") {
+      console.log("theme set to false")
       setTheme(true)
-    } else {setTheme(false)}
+    }
+
   };
 
   React.useEffect(() => {
@@ -22,7 +30,11 @@ const Provider = props => {
   return (
     <myState.Provider value={{
       isDark,
-      changeTheme: () => {setTheme(!isDark); Cookies.set("isDark", {isDark}, {expires: 365})}
+      changeTheme: () => {
+        setTheme(!isDark);
+        isDark ? Cookies.set("isDark", true, {expires: 365}) : Cookies.set("isDark", false, {expires: 365})
+        console.log(isDark)
+      }
     }}>
       {props.children}
     </myState.Provider>
