@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import Footer from "../components/footer"
-import {myState} from '../../provider'
+import { myState } from "../../provider"
 import "./style.css"
 
 const IndexPage = ({ data }) => (
@@ -29,42 +29,49 @@ const IndexPage = ({ data }) => (
                   <Link to="/about">About</Link>
                 </div>
                 <div className="nav-theme">
-                  <p onClick={()=> context.changeTheme()}>{context.isDark ? "Light Mode" : "Dark Mode"}</p>
+                  <p onClick={() => context.changeTheme()}>
+                    {context.isDark ? "Light Mode" : "Dark Mode"}
+                  </p>
                 </div>
               </div>
             </header>
             <main>
-              {data.allMarkdownRemark.edges
-                .map(post => (
-                  <div className="post" key={post.node.id}>
-                    <Link
-                      key={post.node.frontmatter.path}
-                      to={post.node.frontmatter.path}
-                      className="post-title-link"
-                    >
-                      <h3 className="post-title">{post.node.frontmatter.title}</h3>
-                    </Link>
-                    <small className="post-date">{post.node.frontmatter.dateString}</small>
-                    <p className="post-excerp">
-                      {post.node.excerpt.substring(0, 100) + "..."}
-                    </p>
-                  </div>
-                ))}
+              {data.allMarkdownRemark.edges.map(post => {
+                if (post.node.frontmatter.published === "true") {
+                  return (
+                    <div className="post" key={post.node.id}>
+                      <Link
+                        key={post.node.frontmatter.path}
+                        to={post.node.frontmatter.path}
+                        className="post-title-link"
+                      >
+                        <h3 className="post-title">
+                          {post.node.frontmatter.title}
+                        </h3>
+                      </Link>
+                      <small className="post-date">
+                        {post.node.frontmatter.dateString}
+                      </small>
+                      <p className="post-excerp">
+                        {post.node.excerpt.substring(0, 100) + "..."}
+                      </p>
+                    </div>
+                  )
+                }
+              })}
             </main>
             <Footer />
             {/* <button onClick={Array}>Debug</button> */}
           </div>
-          
         </div>
       </React.Fragment>
     )}
   </myState.Consumer>
-  
 )
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date]}) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
@@ -73,6 +80,7 @@ export const pageQuery = graphql`
             title
             date
             dateString
+            published
           }
           excerpt
         }
