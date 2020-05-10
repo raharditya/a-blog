@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Footer from "../components/footer"
 import { Helmet } from "react-helmet"
 
-import {myState} from '../../provider'
+import { myState } from "../../provider"
 
 export default function Template({ data }) {
   const post = data.markdownRemark
@@ -22,6 +22,10 @@ export default function Template({ data }) {
                   href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap"
                   rel="stylesheet"
                 ></link>
+                <link
+                  href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+                  rel="stylesheet"
+                ></link>
               </Helmet>
               <header id="top">
                 <h1>A Blog</h1>
@@ -30,29 +34,32 @@ export default function Template({ data }) {
                     <Link to="/">Home</Link>
                   </div>
                   <div className="nav-theme">
-                    <p onClick={()=> context.changeTheme()}>{context.isDark ? "Light Mode" : "Dark Mode"}</p>
+                    <p onClick={() => context.changeTheme()}>
+                      {context.isDark ? "Light Mode" : "Dark Mode"}
+                    </p>
                   </div>
                 </div>
               </header>
-    
+
               <section className="post-header">
-                <h3 className="post-title" style={{marginTop: "1em"}}>{post.frontmatter.title}</h3>
-                <small className="post-date">{post.frontmatter.dateString}</small>
+                <h3 className="post-title" style={{ marginTop: "1em" }}>
+                  {post.frontmatter.title}
+                </h3>
+                <small className="post-date">
+                  {post.frontmatter.dateString}
+                </small>
               </section>
-    
+
               <article className="post-content">
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
               </article>
-    
-              <Footer />
 
+              <Footer />
             </React.Fragment>
           </div>
         </div>
       )}
     </myState.Consumer>
-    
-    
   )
 }
 

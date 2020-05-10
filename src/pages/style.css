@@ -3,10 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
   font-family: "Vollkorn", serif;
 }
 
-.page-wrapper{
+.page-wrapper {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 2em;
@@ -16,23 +19,23 @@
 
 /* LIGHT THEME */
 
-.lightTheme{
+.lightTheme {
   background-color: rgb(243, 237, 230);
   color: rgb(46, 19, 19);
 }
 
 /* DARK THEME */
 
-.darkTheme{
+.darkTheme {
   background-color: rgb(29, 32, 30);
   color: rgb(245, 228, 228);
 }
 
-.darkTheme a{
+.darkTheme a {
   color: rgb(245, 228, 228);
 }
 
-.darkTheme h3{
+.darkTheme h3 {
   color: rgb(245, 228, 228);
 }
 
@@ -76,7 +79,7 @@ header {
   color: black;
 }
 
-.post-title{
+.post-title {
   font-size: 1.3em;
 }
 
@@ -105,16 +108,16 @@ footer {
   padding-bottom: 1em;
 }
 
-footer a{
+footer a {
   display: block;
   margin-bottom: 1.3em;
 }
 
-.about-wrapper{
+.about-wrapper {
   min-height: 100vh;
 }
 
-.nav-theme p{
+.nav-theme p {
   cursor: pointer;
   text-decoration: underline;
 }
