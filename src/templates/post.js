@@ -9,6 +9,8 @@ import { myState } from "../../provider"
 export default function Template({ data }) {
   const post = data.markdownRemark
 
+  console.log(post)
+
   return (
     <myState.Consumer>
       {context => (
@@ -22,10 +24,10 @@ export default function Template({ data }) {
                   href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap"
                   rel="stylesheet"
                 ></link>
-                <link
-                  href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
-                  rel="stylesheet"
-                ></link>
+                <meta
+                  name="description"
+                  content={post.html.substring(3, 100) + "..."}
+                />
               </Helmet>
               <header id="top">
                 <h1>A Blog</h1>
@@ -57,6 +59,16 @@ export default function Template({ data }) {
               <Footer />
             </React.Fragment>
           </div>
+
+          <a href="#top" className="top-link">
+            <div className="top">
+              <p>
+                ↑↑↑
+                <br />
+                Back to top
+              </p>
+            </div>
+          </a>
         </div>
       )}
     </myState.Consumer>
